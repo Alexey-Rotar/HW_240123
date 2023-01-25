@@ -8,10 +8,12 @@ int[] FillingArray(int n)
     int[] array = new int[n];
     for (int i=0; i<array.Length; i++)
     {
-        if (int.TryParse(Console.ReadLine(), out int number))
+        int number;
+        while (!int.TryParse(Console.ReadLine(), out number))
+        {
+            Console.WriteLine("Некорректное значение!");            
+        }          
             array[i] = number;
-        else
-            Console.WriteLine("Некорректное значение!");
     }
     return array;
 }

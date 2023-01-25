@@ -2,7 +2,7 @@
 
 void SumOfDigits()
 {
-	if (ulong.TryParse(Console.ReadLine(), out var number))
+	if (ulong.TryParse(Console.ReadLine(), out ulong number))
 	{   	
             ulong temp=number;
     		double sum=0;
